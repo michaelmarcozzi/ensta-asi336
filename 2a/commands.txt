@@ -1,0 +1,3 @@
+gcc -fno-stack-protector -z execstack buffer-overflow.c -o buffer-overflow.exe
+setarch `uname -m` -R `which bash` 
+gcc buffer-overflow.c -o buffer-overflow-protected.exe

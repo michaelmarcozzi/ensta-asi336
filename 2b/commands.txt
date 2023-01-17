@@ -1,0 +1,2 @@
+gcc format-string.c -o format-string.exe
+3735928559
