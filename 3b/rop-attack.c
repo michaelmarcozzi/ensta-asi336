@@ -1,10 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
+#include <unistd.h>
 
 void launch_shell () {
-    system("sudo /bin/sh");
+    setuid(0);
+    system("/bin/sh");
 }
 
 int check_authentication(char *password,char* msg) {
